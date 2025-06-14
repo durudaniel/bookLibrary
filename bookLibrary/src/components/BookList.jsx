@@ -1,15 +1,20 @@
 import Book from "./Book";
-export default function BookContainer() {
+
+export default function BookContainer({
+  bookItems,
+  onSelectBook,
+  showSelectedBook,
+}) {
   return (
-    <div>
-      <div className="book-container">
-        <Book />
-        <Book />
-        <Book />
-        <Book />
-        <Book />
-        <Book />
-      </div>
+    <div className="book-container">
+      {bookItems.map((books) => (
+        <Book
+          book={books}
+          key={books.id}
+          onSelectBook={onSelectBook}
+          showSelectedBook={showSelectedBook}
+        />
+      ))}
     </div>
   );
 }
