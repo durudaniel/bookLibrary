@@ -14,6 +14,11 @@ body {
 
   border-bottom: #f03e3e 1.5rem solid;
 }
+.menu {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
 
 .header {
   font-family: "Monoton";
@@ -88,6 +93,7 @@ body {
   font-size: 1rem;
 
   border-radius: 0rem;
+  transition: 0.3s;
 }
 
 /******************************************
@@ -95,3 +101,69 @@ body {
 SECTION RENDER BOOK COMPONENT
 ////////////////////////////////////////
 ******************************************/
+
+.order {
+  background-color: #e9ecef;
+  padding: 2rem 2rem;
+  box-shadow: 0.5rem 3rem 3rem rgba(0, 0, 0, 0.07);
+  border-radius: 8px;
+
+  width: 40%;
+}
+
+.section-order {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 2rem;
+  flex-direction: column;
+
+  margin-bottom: 1.9rem;
+}
+
+.render-img {
+  width: 30%;
+}
+
+.section-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.btn-buy,
+.btn-remove {
+  font-size: 1rem;
+  padding: 1rem 1.1rem;
+
+  border-radius: 10rem;
+}
+
+.btn:hover {
+  background-color: #e03131;
+  cursor: pointer;
+}
+.btn:active {
+  transform: translateY(1.5%);
+}
+
+.section-genre h2 {
+  font-size: 1.4rem;
+  color: #212529;
+  letter-spacing: 7px;
+  margin-bottom: 0.8rem;
+}
+
+.section-dcpt h3 {
+  color: #212529;
+  font-size: 1.1rem;
+  letter-spacing: 7px;
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.text {
+  font-size: 1rem;
+  color: #5d656c;
+  word-spacing: 2px;
+}
