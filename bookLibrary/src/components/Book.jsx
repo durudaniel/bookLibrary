@@ -1,9 +1,9 @@
 import Button from "./Button";
 export default function Book({ book, onSelectBook, showSelectedBook }) {
   const isSelected = book === showSelectedBook;
-  //console.log(book);
+  //console.log(book.quantity);
   return (
-    <li className="book-list">
+    <li className={book.quantity !== 0 ? "book-list" : "sold-out"}>
       <img className="book-img" src={book.image} alt="book image" />
 
       <div>
@@ -11,7 +11,7 @@ export default function Book({ book, onSelectBook, showSelectedBook }) {
         <p className="rating">{book.rating} rating</p>
         <p className="price">${book.price}</p>
 
-        {!book.quantity === 0 ? (
+        {book.quantity !== 0 ? (
           <button className="btn" onClick={() => onSelectBook(book)}>
             {isSelected ? "Remove Cart" : "Add to cart"}
           </button>

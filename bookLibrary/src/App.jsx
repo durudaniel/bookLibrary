@@ -1,7 +1,7 @@
 import "./App.css";
 import Menu from "./components/Menu";
 import Header from "./components/Header";
-import Description from "./components/Description";
+
 import { useState } from "react";
 
 export default function BookApp() {
@@ -19,7 +19,6 @@ export default function BookApp() {
   return (
     <div>
       <Header />
-      <Description />
       <Menu
         bookItems={bookItems}
         showSelectedBook={showSelectedBook}
